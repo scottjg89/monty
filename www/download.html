@@ -1,0 +1,29 @@
+<head>
+<h1>Download Page</h1>
+</head>
+
+<body>
+<p>body</b>
+<form name="search" action="/cgi-bin/test.py" method="get">
+Show: <input type="text" name="searchbox">
+
+<form name="search" action="/cgi-bin/test.py" method="get">
+Season: <input type="checkbox" name="seasonall" onchange="toggleDisabledS(this.checked)" value="sall"> Check for all or type season number > <input type="text" name="seasonsearch" id="stb">
+
+
+<form name="search" action="/cgi-bin/test.py" method="get">
+Episode: <input type="checkbox" name="episodeall" onchange="toggleDisabledE(this.checked)" value="eall"> Check for all or enter episode number > <input type="text" name="episodesearch" id="etb">
+<input type="submit" value="Submit">
+</form>
+
+<script>
+function toggleDisabledS(_checked) {
+    document.getElementById('stb').disabled = _checked ? true : false;
+}
+function toggleDisabledE(_checked) {
+    document.getElementById('etb').disabled = _checked ? true : false;
+}
+</script>
+
+</body>
+
